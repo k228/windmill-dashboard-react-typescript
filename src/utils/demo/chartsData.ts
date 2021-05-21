@@ -1,16 +1,18 @@
+import { LinearComponentProps } from 'react-chartjs-2'
+
 export const doughnutLegends = [
   { title: 'Shirts', color: 'bg-blue-500' },
   { title: 'Shoes', color: 'bg-teal-600' },
   { title: 'Bags', color: 'bg-purple-600' },
-];
+]
 export const lineLegends = [
   { title: 'Organic', color: 'bg-teal-600' },
   { title: 'Paid', color: 'bg-purple-600' },
-];
+]
 export const barLegends = [
   { title: 'Shoes', color: 'bg-teal-600' },
   { title: 'Bags', color: 'bg-purple-600' },
-];
+]
 export const doughnutOptions = {
   data: {
     datasets: [
@@ -33,8 +35,8 @@ export const doughnutOptions = {
   legend: {
     display: false,
   },
-};
-export const lineOptions = {
+}
+export const lineOptions: LinearComponentProps = {
   data: {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
@@ -73,26 +75,30 @@ export const lineOptions = {
       intersect: true,
     },
     scales: {
-      x: {
-        display: true,
-        scaleLabel: {
+      xAxes: [
+        {
           display: true,
-          labelString: 'Month',
+          scaleLabel: {
+            display: true,
+            labelString: 'Month',
+          },
         },
-      },
-      y: {
-        display: true,
-        scaleLabel: {
+      ],
+      yAxes: [
+        {
           display: true,
-          labelString: 'Value',
+          scaleLabel: {
+            display: true,
+            labelString: 'Value',
+          },
         },
-      },
+      ],
     },
   },
   legend: {
     display: false,
   },
-};
+}
 export const barOptions = {
   data: {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -119,4 +125,4 @@ export const barOptions = {
   legend: {
     display: false,
   },
-};
+}
