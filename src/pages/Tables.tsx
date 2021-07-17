@@ -76,7 +76,7 @@ function Tables() {
               <TableRow key={i}>
                 <TableCell>
                   <div className="flex items-center text-sm">
-                    <Avatar className="hidden mr-3 md:block" src={user.avatar} alt="User avatar" />
+                    <Avatar className="hidden me-3 md:block" src={user.avatar} alt="User avatar" />
                     <div>
                       <p className="font-semibold">{user.name}</p>
                       <p className="text-xs text-gray-600 dark:text-gray-400">{user.job}</p>
@@ -123,7 +123,7 @@ function Tables() {
               <TableRow key={i}>
                 <TableCell>
                   <div className="flex items-center text-sm">
-                    <Avatar className="hidden mr-3 md:block" src={user.avatar} alt="User avatar" />
+                    <Avatar className="hidden me-3 md:block" src={user.avatar} alt="User avatar" />
                     <div>
                       <p className="font-semibold">{user.name}</p>
                       <p className="text-xs text-gray-600 dark:text-gray-400">{user.job}</p>
@@ -140,7 +140,7 @@ function Tables() {
                   <span className="text-sm">{new Date(user.date).toLocaleDateString()}</span>
                 </TableCell>
                 <TableCell>
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-s-4">
                     <Button layout="link" size="icon" aria-label="Edit">
                       <EditIcon className="w-5 h-5" aria-hidden="true" />
                     </Button>

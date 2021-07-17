@@ -27,15 +27,15 @@ function Forms() {
           <div className="mt-2">
             <Label radio>
               <Input type="radio" value="personal" name="accountType" />
-              <span className="ml-2">Personal</span>
+              <span className="ms-2">Personal</span>
             </Label>
-            <Label className="ml-6" radio>
+            <Label className="ms-6" radio>
               <Input type="radio" value="business" name="accountType" />
-              <span className="ml-2">Business</span>
+              <span className="ms-2">Business</span>
             </Label>
-            <Label disabled className="ml-6" radio>
+            <Label disabled className="ms-6" radio>
               <Input disabled type="radio" value="disabled" name="accountType" />
-              <span className="ml-2">Disabled</span>
+              <span className="ms-2">Disabled</span>
             </Label>
           </div>
         </div>
@@ -68,7 +68,7 @@ function Forms() {
 
         <Label className="mt-6" check>
           <Input type="checkbox" />
-          <span className="ml-2">
+          <span className="ms-2">
             I agree to the <span className="underline">privacy policy</span>
           </span>
         </Label>
@@ -100,28 +100,28 @@ function Forms() {
 
       <div className="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <Label>
-          <span>Icon left</span>
+          <span>Icon start</span>
 
           <div className="relative text-gray-500 focus-within:text-purple-600 dark:focus-within:text-purple-400">
             <input
-              className="block w-full pl-10 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+              className="block w-full ps-10 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
               placeholder="Jane Doe"
             />
-            <div className="absolute inset-y-0 flex items-center ml-3 pointer-events-none">
+            <div className="absolute inset-y-0 flex items-center ms-3 pointer-events-none">
               <MailIcon className="w-5 h-5" aria-hidden="true" />
             </div>
           </div>
         </Label>
 
         <Label className="mt-4">
-          <span className="text-gray-700 dark:text-gray-400">Icon right</span>
+          <span className="text-gray-700 dark:text-gray-400">Icon end</span>
 
           <div className="relative text-gray-500 focus-within:text-purple-600 dark:focus-within:text-purple-400">
             <input
-              className="block w-full pr-10 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+              className="block w-full pe-10 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
               placeholder="Jane Doe"
             />
-            <div className="absolute inset-y-0 right-0 flex items-center mr-3 pointer-events-none">
+            <div className="absolute inset-y-0 end-0 flex items-center me-3 pointer-events-none">
               <MailIcon className="w-5 h-5" aria-hidden="true" />
             </div>
           </div>
@@ -132,26 +132,26 @@ function Forms() {
 
       <div className="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <Label>
-          <span>Button left</span>
+          <span>Button start</span>
           <div className="relative">
             <input
-              className="block w-full pl-20 mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+              className="block w-full ps-20 mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
               placeholder="Jane Doe"
             />
-            <button className="absolute inset-y-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-l-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+            <button className="absolute inset-y-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-s-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
               Click
             </button>
           </div>
         </Label>
 
         <Label className="mt-4">
-          <span>Button right</span>
+          <span>Button end</span>
           <div className="relative text-gray-500 focus-within:text-purple-600">
             <input
-              className="block w-full pr-20 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+              className="block w-full pe-20 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
               placeholder="Jane Doe"
             />
-            <button className="absolute inset-y-0 right-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-r-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+            <button className="absolute inset-y-0 end-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-e-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
               Click
             </button>
           </div>

@@ -2,7 +2,7 @@ import { Windmill } from '@windmill/react-ui'
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import './assets/css/tailwind.output.css'
+import './assets/css/tailwind.css'
 import ThemedSuspense from './components/ThemedSuspense'
 import { SidebarProvider } from './context/SidebarContext'
 // if (process.env.NODE_ENV !== 'production') {

@@ -13,7 +13,7 @@ function Buttons() {
       <CTA />
 
       <SectionTitle>Primary</SectionTitle>
-      <div className="flex flex-col flex-wrap mb-8 space-y-4 md:flex-row md:items-end md:space-x-4">
+      <div className="flex flex-col flex-wrap mb-8 space-y-4 md:flex-row md:items-end md:space-s-4">
         <div>
           <Button size="larger">Larger Button</Button>
         </div>
@@ -42,7 +42,7 @@ function Buttons() {
       </div>
 
       <SectionTitle>Outline</SectionTitle>
-      <div className="flex flex-col flex-wrap mb-8 space-y-4 md:flex-row md:items-end md:space-x-4">
+      <div className="flex flex-col flex-wrap mb-8 space-y-4 md:flex-row md:items-end md:space-s-4">
         <div>
           <Button layout="outline" size="larger">
             Larger Button
@@ -79,7 +79,7 @@ function Buttons() {
       </div>
 
       <SectionTitle>Link</SectionTitle>
-      <div className="flex flex-col flex-wrap mb-8 space-y-4 md:flex-row md:items-end md:space-x-4">
+      <div className="flex flex-col flex-wrap mb-8 space-y-4 md:flex-row md:items-end md:space-s-4">
         <div>
           <Button layout="link" size="larger">
             Larger Button
@@ -116,10 +116,10 @@ function Buttons() {
       </div>
 
       <SectionTitle>Icons</SectionTitle>
-      <div className="flex flex-col flex-wrap mb-8 space-y-4 md:flex-row md:items-end md:space-x-4">
+      <div className="flex flex-col flex-wrap mb-8 space-y-4 md:flex-row md:items-end md:space-s-4">
         <div>
           <Button iconRight={HeartIcon}>
-            <span>Icon right</span>
+            <span>Icon end</span>
           </Button>
         </div>
 

@@ -36,7 +36,7 @@ function Login() {
 
               <Label className="mt-6" check>
                 <Input type="checkbox" />
-                <span className="ml-2">
+                <span className="ms-2">
                   I agree to the <span className="underline">privacy policy</span>
                 </span>
               </Label>
@@ -48,11 +48,11 @@ function Login() {
               <hr className="my-8" />
 
               <Button block layout="outline">
-                <GithubIcon className="w-4 h-4 mr-2" aria-hidden="true" />
+                <GithubIcon className="w-4 h-4 me-2" aria-hidden="true" />
                 Github
               </Button>
               <Button block className="mt-4" layout="outline">
-                <TwitterIcon className="w-4 h-4 mr-2" aria-hidden="true" />
+                <TwitterIcon className="w-4 h-4 me-2" aria-hidden="true" />
                 Twitter
               </Button>
 
