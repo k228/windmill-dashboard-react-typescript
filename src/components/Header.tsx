@@ -18,16 +18,10 @@ import {
   DropdownItem,
   WindmillContext,
 } from "@windmill/react-ui";
+import Language from "./Language";
 import { useTranslation } from "react-i18next";
 function Header() {
-  const { t, i18n } = useTranslation();
-  const changeLanguageHandler = (lang:string) =>
-  {
-    i18n.changeLanguage(lang,()=>{
-      const body=(document.querySelector("body")as HTMLBodyElement);
-      body.dir=(lang==="fa"?"rtl":"ltr")
-    })
-  }
+  const { t } = useTranslation();
   const { mode, toggleMode } = useContext(WindmillContext);
   const { toggleSidebar } = useContext(SidebarContext);
   const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false);
@@ -63,17 +57,7 @@ function Header() {
         </div>
         <ul className="flex items-center flex-shrink-0 space-s-6">
           <li className="flex">
-            <button
-              className="rounded-md focus:outline-none focus:shadow-outline-purple font-bold"
-              
-              aria-label="Toggle color mode"
-            >
-              {i18n.language === "fa" ? (
-                <span onClick={()=>changeLanguageHandler("en")}>EN</span>
-              ) : (
-                <span onClick={()=>changeLanguageHandler("fa")}>FA</span>
-              )}
-            </button>
+            <Language />
           </li>
           <li className="flex">
             <button

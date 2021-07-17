@@ -1,7 +1,9 @@
 {
   "Search for projects": "جستجوی پروژه ها",
-  "description": {
-    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
-    "part2": "Switch language between english and german using buttons above."
-  }
+  "Login":"ورود",
+  "Email":"ایمیل",
+  "Password":"رمز عبور",
+  "Log in":"ورود به سیستم",
+  "Forgot your password ?":"رمز عبور خود را فراموش کرده اید ؟",
+  "Create account":"ایجاد حساب"
 }
