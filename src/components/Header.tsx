@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { SidebarContext } from '../context/SidebarContext';
+import React, { useContext, useState } from "react";
+import { SidebarContext } from "../context/SidebarContext";
 import {
   SearchIcon,
   MoonIcon,
@@ -9,9 +9,25 @@ import {
   OutlinePersonIcon,
   OutlineCogIcon,
   OutlineLogoutIcon,
-} from '../icons';
-import { Avatar, Badge, Input, Dropdown, DropdownItem, WindmillContext } from '@windmill/react-ui';
+} from "../icons";
+import {
+  Avatar,
+  Badge,
+  Input,
+  Dropdown,
+  DropdownItem,
+  WindmillContext,
+} from "@windmill/react-ui";
+import { useTranslation } from "react-i18next";
 function Header() {
+  const { t, i18n } = useTranslation();
+  const changeLanguageHandler = (lang:string) =>
+  {
+    i18n.changeLanguage(lang,()=>{
+      const body=(document.querySelector("body")as HTMLBodyElement);
+      body.dir=(lang==="fa"?"rtl":"ltr")
+    })
+  }
   const { mode, toggleMode } = useContext(WindmillContext);
   const { toggleSidebar } = useContext(SidebarContext);
   const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false);
@@ -38,17 +54,34 @@ function Header() {
             <div className="absolute inset-y-0 flex items-center ps-2">
               <SearchIcon className="w-4 h-4" aria-hidden="true" />
             </div>
-            <Input className="ps-8 text-gray-700" placeholder="Search for projects" aria-label="Search" />
+            <Input
+              className="ps-8 text-gray-700"
+              placeholder={t("Search for projects")}
+              aria-label="Search"
+            />
           </div>
         </div>
         <ul className="flex items-center flex-shrink-0 space-s-6">
+          <li className="flex">
+            <button
+              className="rounded-md focus:outline-none focus:shadow-outline-purple font-bold"
+              
+              aria-label="Toggle color mode"
+            >
+              {i18n.language === "fa" ? (
+                <span onClick={()=>changeLanguageHandler("en")}>EN</span>
+              ) : (
+                <span onClick={()=>changeLanguageHandler("fa")}>FA</span>
+              )}
+            </button>
+          </li>
           <li className="flex">
             <button
               className="rounded-md focus:outline-none focus:shadow-outline-purple"
               onClick={toggleMode}
               aria-label="Toggle color mode"
             >
-              {mode === 'dark' ? (
+              {mode === "dark" ? (
                 <SunIcon className="w-5 h-5" aria-hidden="true" />
               ) : (
                 <MoonIcon className="w-5 h-5" aria-hidden="true" />
@@ -71,7 +104,11 @@ function Header() {
               ></span>
             </button>
 
-            <Dropdown align="end" isOpen={isNotificationsMenuOpen} onClose={() => setIsNotificationsMenuOpen(false)}>
+            <Dropdown
+              align="end"
+              isOpen={isNotificationsMenuOpen}
+              onClose={() => setIsNotificationsMenuOpen(false)}
+            >
               <DropdownItem tag="a" href="#" className="justify-between">
                 <span>Messages</span>
                 <Badge type="danger">13</Badge>
@@ -80,7 +117,7 @@ function Header() {
                 <span>Sales</span>
                 <Badge type="danger">2</Badge>
               </DropdownItem>
-              <DropdownItem onClick={() => alert('Alerts!')}>
+              <DropdownItem onClick={() => alert("Alerts!")}>
                 <span>Alerts</span>
               </DropdownItem>
             </Dropdown>
@@ -100,17 +137,27 @@ function Header() {
                 aria-hidden="true"
               />
             </button>
-            <Dropdown align="end" isOpen={isProfileMenuOpen} onClose={() => setIsProfileMenuOpen(false)}>
+            <Dropdown
+              align="end"
+              isOpen={isProfileMenuOpen}
+              onClose={() => setIsProfileMenuOpen(false)}
+            >
               <DropdownItem tag="a" href="#">
-                <OutlinePersonIcon className="w-4 h-4 me-3" aria-hidden="true" />
+                <OutlinePersonIcon
+                  className="w-4 h-4 me-3"
+                  aria-hidden="true"
+                />
                 <span>Profile</span>
               </DropdownItem>
               <DropdownItem tag="a" href="#">
                 <OutlineCogIcon className="w-4 h-4 me-3" aria-hidden="true" />
                 <span>Settings</span>
               </DropdownItem>
-              <DropdownItem onClick={() => alert('Log out!')}>
-                <OutlineLogoutIcon className="w-4 h-4 me-3" aria-hidden="true" />
+              <DropdownItem onClick={() => alert("Log out!")}>
+                <OutlineLogoutIcon
+                  className="w-4 h-4 me-3"
+                  aria-hidden="true"
+                />
                 <span>Log out</span>
               </DropdownItem>
             </Dropdown>
