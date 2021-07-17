@@ -34,7 +34,7 @@ function Login() {
                 </h1>
                 <Language />
               </div>
-              
+
               <Label>
                 <span>{t("Email")}</span>
                 <Input
@@ -82,7 +82,6 @@ function Login() {
                   to="/create-account"
                 >
                   {t("Create account")}
-                 
                 </Link>
               </p>
             </div>

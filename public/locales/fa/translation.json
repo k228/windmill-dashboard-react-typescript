@@ -5,5 +5,9 @@
   "Password":"رمز عبور",
   "Log in":"ورود به سیستم",
   "Forgot your password ?":"رمز عبور خود را فراموش کرده اید ؟",
-  "Create account":"ایجاد حساب"
+  "Create account":"ایجاد حساب",
+  "Confirm password":"رمز ورود را تأیید کنید",
+  "Already have an account? Login":"قبلاً عضو شده اید؟ وارد شوید",
+  "privacy policy":"سیاست حفظ حریم خصوصی",
+  "I agree to the":"من موافقم با"
 }
