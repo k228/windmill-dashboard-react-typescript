@@ -1,11 +1,11 @@
 import React from 'react';
-import PageTitle from '../components/Typography/PageTitle';
-import SectionTitle from '../components/Typography/SectionTitle';
-import CTA from '../components/CTA';
-import InfoCard from '../components/Cards/InfoCard';
+import PageTitle from '../../components/vendors/Typography/PageTitle';
+import SectionTitle from '../../components/vendors/Typography/SectionTitle';
+import CTA from '../../components/vendors/CTA';
+import InfoCard from '../../components/vendors/Cards/InfoCard';
 import { Card, CardBody } from '@windmill/react-ui';
-import { CartIcon, ChatIcon, MoneyIcon, PeopleIcon } from '../icons';
-import RoundIcon from '../components/RoundIcon';
+import { CartIcon, ChatIcon, MoneyIcon, PeopleIcon } from '../../icons';
+import RoundIcon from '../../components/vendors/RoundIcon';
 function Cards() {
   return (
     <>

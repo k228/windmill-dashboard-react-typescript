@@ -1,9 +1,9 @@
 import React from 'react';
-import CTA from '../components/CTA';
-import PageTitle from '../components/Typography/PageTitle';
-import SectionTitle from '../components/Typography/SectionTitle';
+import CTA from '../../components/vendors/CTA';
+import PageTitle from '../../components/vendors/Typography/PageTitle';
+import SectionTitle from '../../components/vendors/Typography/SectionTitle';
 import { Input, HelperText, Label, Select, Textarea } from '@windmill/react-ui';
-import { MailIcon } from '../icons';
+import { MailIcon } from '../../icons';
 function Forms() {
   return (
     <>

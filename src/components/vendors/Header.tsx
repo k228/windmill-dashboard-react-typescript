@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { SidebarContext } from "../context/SidebarContext";
+import { SidebarContext } from "../../context/SidebarContext";
 import {
   SearchIcon,
   MoonIcon,
@@ -9,7 +9,7 @@ import {
   OutlinePersonIcon,
   OutlineCogIcon,
   OutlineLogoutIcon,
-} from "../icons";
+} from "../../icons";
 import {
   Avatar,
   Badge,
@@ -20,17 +20,25 @@ import {
 } from "@windmill/react-ui";
 import Language from "./Language";
 import { useTranslation } from "react-i18next";
+import {checkAuth} from "../../store/auth/authAction";
+import {useAppDispatch} from "../../store/hooks";
 function Header() {
   const { t } = useTranslation();
   const { mode, toggleMode } = useContext(WindmillContext);
   const { toggleSidebar } = useContext(SidebarContext);
   const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+  const dispatch = useAppDispatch();
   function handleNotificationsClick() {
     setIsNotificationsMenuOpen(!isNotificationsMenuOpen);
   }
   function handleProfileClick() {
     setIsProfileMenuOpen(!isProfileMenuOpen);
+  }
+
+  function logoutHandler() {
+    localStorage.removeItem("token");
+    dispatch(checkAuth());
   }
   return (
     <header className="z-40 py-4 bg-white shadow-bottom dark:bg-gray-800">
@@ -137,12 +145,12 @@ function Header() {
                 <OutlineCogIcon className="w-4 h-4 me-3" aria-hidden="true" />
                 <span>Settings</span>
               </DropdownItem>
-              <DropdownItem onClick={() => alert("Log out!")}>
+              <DropdownItem onClick={logoutHandler}>
                 <OutlineLogoutIcon
                   className="w-4 h-4 me-3"
                   aria-hidden="true"
                 />
-                <span>Log out</span>
+                <span>{t("Log out")}</span>
               </DropdownItem>
             </Dropdown>
           </li>

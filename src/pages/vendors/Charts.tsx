@@ -1,8 +1,8 @@
 import React from 'react';
-import ChartCard from '../components/Chart/ChartCard';
+import ChartCard from '../../components/vendors/Chart/ChartCard';
 import { Doughnut, Line, Bar } from 'react-chartjs-2';
-import ChartLegend from '../components/Chart/ChartLegend';
-import PageTitle from '../components/Typography/PageTitle';
+import ChartLegend from '../../components/vendors/Chart/ChartLegend';
+import PageTitle from '../../components/vendors/Typography/PageTitle';
 import {
   doughnutOptions,
   lineOptions,
@@ -10,7 +10,7 @@ import {
   doughnutLegends,
   lineLegends,
   barLegends,
-} from '../utils/demo/chartsData';
+} from '../../utils/demo/chartsData';
 function Charts() {
   return (
     <>

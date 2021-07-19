@@ -1,9 +1,9 @@
 import { Transition } from '@windmill/react-ui'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import * as Icons from '../../icons'
-import { DropdownIcon } from '../../icons'
-import { RouteData } from '../../routes/sidebar'
+import * as Icons from '../../../icons'
+import { DropdownIcon } from '../../../icons'
+import { RouteData } from '../../../routes/sidebar'
 
 function Icon({ icon, ...props }: any) {
   const Icon = Icons[icon]

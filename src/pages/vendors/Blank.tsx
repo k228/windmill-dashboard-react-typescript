@@ -1,5 +1,5 @@
 import React from 'react';
-import PageTitle from '../components/Typography/PageTitle';
+import PageTitle from '../../components/vendors/Typography/PageTitle';
 function Blank() {
   return (
     <>

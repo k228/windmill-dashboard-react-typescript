@@ -1,8 +1,8 @@
 import { Button } from '@windmill/react-ui'
 import React from 'react'
 import { NavLink, Route } from 'react-router-dom'
-import * as Icons from '../../icons'
-import routes from '../../routes/sidebar'
+import * as Icons from '../../../icons'
+import routes from '../../../routes/sidebar'
 import SidebarSubmenu from './SidebarSubmenu'
 function Icon({ icon, ...props }: any) {
   const Icon = Icons[icon]

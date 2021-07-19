@@ -9,5 +9,7 @@
   "Confirm password":"رمز ورود را تأیید کنید",
   "Already have an account? Login":"قبلاً عضو شده اید؟ وارد شوید",
   "privacy policy":"سیاست حفظ حریم خصوصی",
-  "I agree to the":"من موافقم با"
+  "I agree to the":"من موافقم با",
+  "Username": "نام کاربری",
+  "Log out": "خروج"
 }

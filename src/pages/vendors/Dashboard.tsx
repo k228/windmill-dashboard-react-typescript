@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import CTA from '../components/CTA';
-import InfoCard from '../components/Cards/InfoCard';
-import ChartCard from '../components/Chart/ChartCard';
+import CTA from '../../components/vendors/CTA';
+import InfoCard from '../../components/vendors/Cards/InfoCard';
+import ChartCard from '../../components/vendors/Chart/ChartCard';
 import { Doughnut, Line } from 'react-chartjs-2';
-import ChartLegend from '../components/Chart/ChartLegend';
-import PageTitle from '../components/Typography/PageTitle';
-import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from '../icons';
-import RoundIcon from '../components/RoundIcon';
-import response from '../utils/demo/tableData';
+import ChartLegend from '../../components/vendors/Chart/ChartLegend';
+import PageTitle from '../../components/vendors/Typography/PageTitle';
+import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from '../../icons';
+import RoundIcon from '../../components/vendors/RoundIcon';
+import response from '../../utils/demo/tableData';
 import {
   TableBody,
   TableContainer,
@@ -20,7 +20,7 @@ import {
   Badge,
   Pagination,
 } from '@windmill/react-ui';
-import { doughnutOptions, lineOptions, doughnutLegends, lineLegends } from '../utils/demo/chartsData';
+import { doughnutOptions, lineOptions, doughnutLegends, lineLegends } from '../../utils/demo/chartsData';
 function Dashboard() {
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
