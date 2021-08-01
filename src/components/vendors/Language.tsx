@@ -1,12 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import {ChangeLanguage} from "../../utils/ChangeLanguage";
 
 const Language = () => {
   const { i18n } = useTranslation();
   const changeLanguageHandler = (lang: string) => {
     i18n.changeLanguage(lang, () => {
-      const body = document.querySelector("body") as HTMLBodyElement;
-      body.dir = lang === "fa" ? "rtl" : "ltr";
+      ChangeLanguage(lang)
     });
   };
   return (
