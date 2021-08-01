@@ -11,6 +11,7 @@ const Language = () => {
   };
   return (
     <button
+      type="button"
       className="rounded-md focus:outline-none focus:shadow-outline-purple font-bold text-purple-600"
       aria-label="Toggle color mode"
     >

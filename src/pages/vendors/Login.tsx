@@ -33,21 +33,25 @@ function Login() {
 
   const submitHandler = async (event: FormEvent) => {
     event.preventDefault();
-    axios.post<ILoginResponse>("login",{
+    axios.post<ILoginResponse>("/user/login",{
       username:username,
       password:password
     }).then(resp=>{
+      console.log(resp)
       dispatch(setUser(resp.data.user));
       if (resp.data.token) {
         localStorage.setItem("token", resp.data.token);
       }
       dispatch(setAuth(1));
     }).catch(err=>{
+      console.log(err.response)
+      if(err?.response?.data?.message){
+        addToast(err.response.data.message, {
+          appearance: 'error',
+          autoDismiss: true,
+        })
+      }
 
-      addToast(err.response.data, {
-        appearance: 'error',
-        autoDismiss: true,
-      })
     })
   };
 
