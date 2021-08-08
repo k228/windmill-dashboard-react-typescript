@@ -33,7 +33,7 @@ function Login() {
 
   const submitHandler = async (event: FormEvent) => {
     event.preventDefault();
-    axios.post<ILoginResponse>("/user/login",{
+    axios.post<ILoginResponse>("/auth/login",{
       username:username,
       password:password
     }).then(resp=>{

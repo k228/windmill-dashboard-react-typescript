@@ -6,7 +6,7 @@ import axios from "../../axios/vendors/auth.axios"
 export const checkAuth = () => (dispatch: Dispatch) => {
     axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("token")}`;
     axios
-        .get(`/me`).then(response => {
+        .get(`/auth/me`).then(response => {
             console.log(2)
             dispatch(setUser(response.data));
             dispatch(setAuth(1))
